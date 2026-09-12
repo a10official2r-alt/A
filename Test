@@ -3,7 +3,7 @@ local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 local Window = Rayfield:CreateWindow({
     Name = "Anghelo Verse Script Hub",
     LoadingTitle = "Anghelo's Script Hub",
-    LoadingSubtitle = "Version 0.1 TEST",
+    LoadingSubtitle = "Version 1.0 Release",
     
     ConfigurationSaving = {
         Enabled = false
@@ -21,36 +21,57 @@ Tab:CreateButton({
 
         local success = pcall(function()
             local Script = loadstring(game:HttpGet("https://fyycommunity.my.id"))
-            assert(Script, "Failed to load script, couldn't destroy rayfield")
+            assert(Script, "Failed to load script")
             Script()
         end)
-
-        if success then
-            Rayfield:Destroy()
-        end
-
     end
 })
 
 Tab:CreateButton({
-    Name = "Miranda (NO KEY)",
+    Name = "Miranda (NO KEY) (Buggy)",
     Callback = function()
 
         local success = pcall(function()
-            local Script = loadstring(game:HttpGet(". https://raw.githubusercontent.com/miirandahub/loader/refs/heads/main/stealaeggs"))
-            assert(Script, "Failed to load script, couldn't destroy rayfield")
+            local Script = loadstring(game:HttpGet("https://raw.githubusercontent.com/miirandahub/loader/refs/heads/main/stealaeggs"))
+            assert(Script, "Failed to load script")
+            Script()
+        end)       
+    end
+})
+
+Tab:CreateButton({
+    Name = "Lennon Keyless (Needs Discord)",
+    Callback = function()
+
+        local success = pcall(function()
+            local Script = loadstring(game:HttpGet("https://raw.githubusercontent.com/lennonxscripts/lennonhub/main/stealaegg.lua"))()
+            assert(Script, "Failed to load script")
             Script()
         end)
+    end
+})
 
-        if success then
-            Rayfield:Destroy()
-        end
+Tab:CreateButton({
+    Name = "Decode (NO KEY)",
+    Callback = function()
 
+        local success = pcall(function()
+            local Script = loadstring(game:HttpGet("https://raw.githubusercontent.com/ItzYumi/Decode/refs/heads/main/DE%3ACODE.lua", true))()
+            assert(Script, "Failed to load script")
+            Script()
+        end)       
+    end
+})
+
+Tab:CreateButton({
+    Name = "Destroy Rayfield",
+    Callback = function()
+        Rayfield:Destroy()
     end
 })
 
 Rayfield:Notify({
     Title = "Anghelo's Script Hub",
-    Content = "Version 0.1 TEST",
+    Content = "Version 1.0 Release",
     Duration = 3
 })
