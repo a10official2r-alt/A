@@ -1,0 +1,56 @@
+local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Anghelo Verse Script Hub",
+    LoadingTitle = "Anghelo's Script Hub",
+    LoadingSubtitle = "Version 0.1 TEST",
+    
+    ConfigurationSaving = {
+        Enabled = false
+    },
+
+    KeySystem = false,
+
+})
+
+local Tab = Window:CreateTab("SAE (No key)", 4483362458)
+
+Tab:CreateButton({
+    Name = "FYY (NO KEY)",
+    Callback = function()
+
+        local success = pcall(function()
+            local Script = loadstring(game:HttpGet("https://fyycommunity.my.id"))
+            assert(Script, "Failed to load script, couldn't destroy rayfield")
+            Script()
+        end)
+
+        if success then
+            Rayfield:Destroy()
+        end
+
+    end
+})
+
+Tab:CreateButton({
+    Name = "Miranda (NO KEY)",
+    Callback = function()
+
+        local success = pcall(function()
+            local Script = loadstring(game:HttpGet(". https://raw.githubusercontent.com/miirandahub/loader/refs/heads/main/stealaeggs"))
+            assert(Script, "Failed to load script, couldn't destroy rayfield")
+            Script()
+        end)
+
+        if success then
+            Rayfield:Destroy()
+        end
+
+    end
+})
+
+Rayfield:Notify({
+    Title = "Anghelo's Script Hub",
+    Content = "Version 0.1 TEST",
+    Duration = 3
+})
